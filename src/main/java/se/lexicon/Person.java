@@ -7,9 +7,9 @@ public class Person {
     private String firstName;
     private String lastName;
     private String email;
-    private Users credentials;
+    private AppUsers credentials;
 
-    public Person(int id, String firstName, String lastName, String email, Users credentials) {
+    public Person(int id, String firstName, String lastName, String email, AppUsers credentials) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -45,11 +45,11 @@ public class Person {
         this.email = email;
     }
 
-    public Users getCredentials() {
+    public AppUsers getCredentials() {
         return credentials;
     }
 
-    public void setCredentials(Users credentials) {
+    public void setCredentials(AppUsers credentials) {
         this.credentials = credentials;
     }
 

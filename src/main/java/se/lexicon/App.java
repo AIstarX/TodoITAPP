@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class App {
     public static void main(String[] args) {
-        Users appUser1 = new Users("eriksv", "password123", Roles.ROLE_APP_USER);
+        AppUsers appUser1 = new AppUsers("eriksv", "password123", Roles.ROLE_APP_USER);
         Person person1 = new Person(1, "Erik", "Svensson", "erik.svensson@gmail.com", appUser1);
         System.out.println("Person created: " + person1);
 
@@ -19,4 +19,5 @@ public class App {
         todoItem1.setDone(true);
         System.out.println("TodoItem updated: " + todoItem1);
     }
+    ;
 }

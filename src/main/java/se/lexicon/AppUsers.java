@@ -1,11 +1,13 @@
 package se.lexicon;
 
-public class Users {
+import java.util.Objects;
+
+public class AppUsers {
     private String username;
     private String password;
     private Roles role;
 
-    public Users(String username, String password, Roles role) {
+    public AppUsers (String username, String password, Roles role) {
         if (username == null || username.trim().isEmpty()) {
             throw new IllegalArgumentException("Username cannot be null or empty");
         }
@@ -23,6 +25,7 @@ public class Users {
     public String getUsername() {
         return username;
     }
+
 
     public void setUsername(String username) {
         if (username == null || username.trim().isEmpty()) {
@@ -66,7 +69,7 @@ public class Users {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Users appUser = (Users) o;
+        AppUsers appUser = (AppUsers) o;
 
         if (!username.equals(appUser.username)) return false;
         return role == appUser.role;
